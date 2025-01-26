@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Auto-Pin Tabs",
+  "description": "Automatically opens and pins Will's specified tabs.",
+  "version": "1.0",
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}

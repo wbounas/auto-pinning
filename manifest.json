@@ -1,18 +1,22 @@
 {
-  "manifest_version": 2,
-  "name": "Auto-Pin Tabs",
-  "description": "Automatically opens and pins Will's specified tabs.",
+  "manifest_version": 3,
+  "name": "Auto-Pinning Extension",
   "version": "1.0",
-  "permissions": ["tabs"],
+  "description": "Automatically pin tabs based on rules and show them in the extension popup.",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
   "icons": {
-    "48": "icon.png"
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   }
 }
